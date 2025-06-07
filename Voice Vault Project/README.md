@@ -84,7 +84,7 @@ logger.setLevel(logging.INFO)
 s3_client = boto3.client('s3')
 polly_client = boto3.client('polly')
 
-BUCKET = 'voice-vault-bucket'  # Replace with your bucket name
+BUCKET = 'voice-vault-bucket'  
 
 def lambda_handler(event, context):
     logger.info(f"Received event: {json.dumps(event)}")
