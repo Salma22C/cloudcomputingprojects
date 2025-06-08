@@ -1,4 +1,32 @@
+# 🖼️ Serverless Image Tagging with Amazon Rekognition
 
+This project implements a fully serverless image recognition pipeline using **AWS Lambda**, **Amazon Rekognition**, and **Amazon S3**. Whenever you upload an image to a specific folder in S3 (`uploads/`), the system automatically:
+
+- Detects objects and scenes using Rekognition.
+- Stores detected labels as `.json` metadata in another S3 folder (`metadata/`).
+- Removes the need for manual image tagging.
+
+---
+
+## 📌 Use Case
+
+This system helps automatically organize and classify image collections. Instead of manually tagging hundreds of images, you can now automate the entire process and generate searchable metadata using AI.
+
+---
+
+## 🏗️ Architecture
+
+The architecture is simple, efficient, and entirely serverless:
+
+[User Upload] → S3 (uploads/)
+↓
+[Trigger: S3 PUT Event]
+↓
+AWS Lambda
+↓ (Calls Rekognition DetectLabels)
+Amazon Rekognition
+↓ (Writes metadata to S3)
+S3 (metadata/)
 ---
 
 ## ⚙️ Setup Instructions
