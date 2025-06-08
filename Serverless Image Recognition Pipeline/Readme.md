@@ -61,8 +61,8 @@ Create an IAM role with this inline policy (or attach equivalent managed permiss
     }
   ]
 }
-3. Deploy the Lambda Function
-4. Add S3 Trigger to Lambda
+### 3. Deploy the Lambda Function
+### 4. Add S3 Trigger to Lambda
 
 In the AWS Lambda Console:
 
@@ -81,7 +81,7 @@ In the AWS Lambda Console:
         Suffix: (leave blank)
 
 Save the trigger.
-🐾 Output: Cat Not Explicitly Detected
+###🐾 Output: Cat Not Explicitly Detected
 
 Sometimes, Rekognition may only return general labels. For example:
 {
