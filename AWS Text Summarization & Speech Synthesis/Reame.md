@@ -23,7 +23,6 @@ This project demonstrates an AWS Lambda function triggered by S3 text file uploa
 
 ## Prerequisites
 
-- AWS CLI configured with appropriate permissions  
 - IAM Role with S3, Comprehend, and Polly access  
 
 ---
