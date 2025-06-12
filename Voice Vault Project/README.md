@@ -69,7 +69,7 @@ Check the `audio/` folder for the generated `.mp3` file.
 
 
 
-## Lambda Code (Python)
+
 
 
 
