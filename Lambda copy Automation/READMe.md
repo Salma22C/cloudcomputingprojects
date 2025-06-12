@@ -47,7 +47,7 @@ This project automates the copying of files from one Amazon S3 bucket to another
 
 ### Step 5: Add Lambda Function Code
 
-## Testing
+### Step 6: Testing
 
 1. **Upload Test File**:
    - Upload a sample file (e.g., `test.txt`) to your source S3 bucket
