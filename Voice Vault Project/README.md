@@ -1,6 +1,6 @@
 # Voice Vault – Text-to-Speech Automation using AWS S3, Lambda, Polly, and Comprehend
 
-[**GitHub Repository**](https://github.com/Salma22C/awsprojects/tree/main/Voice%20Vault%20Project)
+
 
 ## Project Overview
 
@@ -13,11 +13,11 @@ Voice Vault is a serverless application that automatically converts text files s
 
 ### Technologies Used
 
-- [AWS Lambda]
-- [Amazon Polly]
-- [Amazon Comprehend]
-- [Amazon S3]
-- [AWS IAM]
+- AWS Lambda
+- Amazon Polly
+- Amazon Comprehend
+- Amazon S3
+- AWS IAM]
 - Python 3.9+
 
 ---
