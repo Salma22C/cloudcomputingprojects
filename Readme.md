@@ -1,6 +1,45 @@
 
 ---
+# Serverless Data Analytics and Visualization Pipeline
 
+This project demonstrates a fully serverless data analytics and visualization pipeline using AWS services. It integrates two primary use cases:
+
+1. **Podcast Insights Dashboard** – Processes structured `.csv` podcast data to extract listener and episode insights.
+2. **AWS Cost Monitoring Dashboard** – Analyzes AWS Cost and Usage Reports (CUR) to monitor cloud expenditure by service and region.
+
+Both pipelines are built using a modern, serverless architecture optimized for scalability, cost-efficiency, and automation.
+
+---
+
+## Features
+
+- **Serverless Architecture**  
+  Leverages AWS Lambda, Glue, Athena, and QuickSight to eliminate infrastructure management.
+
+- **Automated Data Ingestion**  
+  Upload `.csv` data and CUR files into S3 buckets to trigger ingestion workflows automatically.
+
+- **ETL Processing with AWS Glue**  
+  Extracts, transforms, and loads data into a queryable format with schema inference and data cataloging.
+
+- **SQL-Based Analytics**  
+  Uses Amazon Athena to run SQL queries over structured data without provisioning servers.
+
+- **Interactive Dashboards**  
+  Amazon QuickSight dashboards visualize podcast performance metrics and AWS cost drivers.
+
+- **Monitoring and Logging**  
+  AWS CloudWatch tracks pipeline status and logs function activity for auditing and debugging.
+
+---
+
+## Architecture Overview
+
+Data Sources] --> [Amazon S3] --> [AWS Glue] --> [Amazon Athena] --> [Amazon QuickSight]
+|
+[CloudWatch Logs]
+|
+[AWS Lambda (optional triggers)]
 ## Use Case 1: Podcast Insights Dashboard
 
 ### Description
