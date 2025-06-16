@@ -61,3 +61,9 @@ This project automates the copying of files from one Amazon S3 bucket to another
 3. **Different File Types**:
    - Test with various file types (images, documents, archives)
    - Verify all file types are copied correctly
+
+## 👤 Author
+
+**Salma Mohamed Kassem**  
+📍 Egypt  
+🌐 [GitHub](https://github.com/Salma22C) • [LinkedIn](https://linkedin.com/in/salma-mohamed-kassem)
