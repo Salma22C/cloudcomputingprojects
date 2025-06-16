@@ -74,4 +74,9 @@ Sometimes, Rekognition returns broad labels instead of very specific ones. For i
 - Review CloudWatch logs to debug and refine detection.
 - Adjust the maximum number of labels returned to capture more or fewer categories.
 
+## 👤 Author
+
+**Salma Mohamed Kassem**  
+📍 Egypt  
+🌐 [GitHub](https://github.com/Salma22C) • [LinkedIn](https://linkedin.com/in/salma-mohamed-kassem)
 
