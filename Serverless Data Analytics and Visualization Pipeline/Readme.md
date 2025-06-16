@@ -98,6 +98,9 @@ Analyzes AWS CUR data to understand cloud cost distribution, identify top spende
 
 ---
 
-## License
+## 👤 Author
 
-This project is for educational and demonstration purposes.
+**Salma Mohamed Kassem**  
+📍 Egypt  
+🌐 [GitHub](https://github.com/Salma22C) • [LinkedIn](https://linkedin.com/in/salma-mohamed-kassem)
+
