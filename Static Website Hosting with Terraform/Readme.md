@@ -61,15 +61,28 @@ terraform apply
 ### ✅  Step 5: Upload Website Files (Optional if not automated)
 
 If your files aren’t auto-uploaded with Terraform, use AWS CLI:
-
 aws s3 cp index.html s3://your-bucket-name/index.html --acl public-read
 aws s3 cp error.html s3://your-bucket-name/error.html --acl public-read
 ### ✅ Step 6: Access Your Website
-
 After Terraform runs, it will display the website endpoint:
-
 Outputs:
-
 website_endpoint = http://your-bucket-name.s3-website-region.amazonaws.com
-
 Open it in a browser to see your static site.
+🧹 Tear Down (Destroy Resources)
+
+To avoid ongoing charges or clutter, you can destroy the infrastructure:
+terraform destroy
+
+## 🔒 Security Notes
+
+- This configuration grants **public read access** to the S3 bucket, which is suitable only for hosting static, non-sensitive content.
+- **Do not use** this setup to store private data or handle secure applications.
+- For production use, consider adding CloudFront, HTTPS, and access control via IAM, OAI (Origin Access Identity), or signed URLs.
+
+---
+
+## 👤 Author
+
+**Salma Mohamed Kassem**  
+📍 Egypt  
+🌐 [GitHub](https://github.com/Salma22C) • [LinkedIn](https://linkedin.com/in/salma-mohamed-kassem)
