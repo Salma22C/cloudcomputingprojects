@@ -32,4 +32,10 @@ This serverless project automatically processes text files uploaded to an S3 buc
 
 Upload your UTF-8 encoded text file to the input S3 bucket. The summarized text and audio will appear in the output folder.
 
+## 👤 Author
+
+**Salma Mohamed Kassem**  
+📍 Egypt  
+🌐 [GitHub](https://github.com/Salma22C) • [LinkedIn](https://linkedin.com/in/salma-mohamed-kassem)
+
 
