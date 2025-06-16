@@ -99,4 +99,9 @@ Upload a `.txt` file into the `notes/` folder. The Lambda function will:
 
 ---
 
+## 👤 Author
+
+**Salma Mohamed Kassem**  
+📍 Egypt  
+🌐 [GitHub](https://github.com/Salma22C) • [LinkedIn](https://linkedin.com/in/salma-mohamed-kassem)
 
