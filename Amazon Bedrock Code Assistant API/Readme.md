@@ -28,3 +28,6 @@ Send a POST request to the API Gateway endpoint with JSON:
 {
   "prompt": "Explain how Amazon EC2 works."
 }
+{
+Explain the main features and use cases of Amazon API Gateway
+}
