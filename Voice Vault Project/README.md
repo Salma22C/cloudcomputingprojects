@@ -29,7 +29,7 @@ Voice Vault is a serverless application that converts `.txt` files stored in Ama
 ## 📋 Prerequisites
 
 - AWS Account with permissions for S3, Lambda, Polly, and Comprehend
-- [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html) or Console access
+- Console access
 - Python 3.9+ locally or as Lambda runtime
 
 ---
