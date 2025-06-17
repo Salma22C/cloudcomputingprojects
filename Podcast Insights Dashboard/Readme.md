@@ -67,13 +67,7 @@ Working with raw `.csv` files introduced schema inconsistencies that made it dif
 ### ❗ QuickSight Setup Attempt (Work in Progress)
  Faced issues configuring data source and permissions. Dashboard not yet finalized.
 Although QuickSight integration is still a work in progress, here's a snapshot of the setup and testing process:
-
-```plaintext
-Podcast-Insights-Dashboard/
-├── media/
-│   └── Screenshot_2025-06-10_161806.png
-├── README.md
-```
+![QucikSight](media/Screenshot%202025-06-17%20155817.png)
 
 ## 👤 Author
 
