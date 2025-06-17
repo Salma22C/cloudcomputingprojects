@@ -1,5 +1,5 @@
 
-# 📊 AWS Cost Monitoring Dashboard
+# 📊  FinOps Dashboard
 
 This project builds a fully serverless dashboard for visualizing AWS cloud spend. It ingests AWS Cost and Usage Reports (CUR), processes them through Glue and Athena, and displays insights in Amazon QuickSight.
 
@@ -67,6 +67,9 @@ Configuring proper partitioning and schema inference for large CUR files in Glue
 2. Set up and run AWS Glue crawlers and ETL jobs to transform and catalog data.  
 3. Use Athena to define cost-related SQL queries.  
 4. Build dashboards in Amazon QuickSight using Athena datasets.
+
+### Dashboard Demo
+![AWS Cost Monitoring Dashboard](Screenshot%202025-06-14%20175220(1).png)
 
 
 
