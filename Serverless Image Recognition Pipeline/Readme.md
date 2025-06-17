@@ -1,82 +1,126 @@
 # 🖼️ Serverless Image Tagging with Amazon Rekognition
 
-This project implements a fully serverless image recognition pipeline using **AWS Lambda**, **Amazon Rekognition**, and **Amazon S3**. Whenever you upload an image to a specific folder in S3 (`uploads/`), the system automatically:
+This project implements a fully serverless image recognition pipeline using **AWS Lambda**, **Amazon Rekognition**, and **Amazon S3**. When you upload an image to the `uploads/` folder in S3, the system automatically:
 
 - Detects objects and scenes using Rekognition.
-- Stores detected labels as `.json` metadata in another S3 folder (`metadata/`).
-- Removes the need for manual image tagging.
+- Saves the results as `.json` metadata in the `metadata/` folder.
+- Removes the need for manual image tagging or classification.
 
----
+
 
 ## 📌 Use Case
 
-This system helps automatically organize and classify image collections. Instead of manually tagging hundreds of images, you can now automate the entire process and generate searchable metadata using AI.
+Automatically organize and tag large sets of images using AI. This pipeline helps you generate metadata for indexing, searching, or filtering images without any manual effort.
 
----
+
 
 ## 🏗️ Architecture
-
-The architecture is simple, efficient, and entirely serverless:
-
-[User Upload] → S3 (uploads/)
+```
+User Upload (S3: uploads/)
 ↓
-[Trigger: S3 PUT Event]
+[S3 PUT Event Trigger]
 ↓
 AWS Lambda
-↓ (Calls Rekognition DetectLabels)
-Amazon Rekognition
-↓ (Writes metadata to S3)
-S3 (metadata/)
+↓
+Amazon Rekognition (DetectLabels)
+↓
+S3: metadata/ (JSON output)
+
+````
+
 ---
 
-## ⚙️ Setup Instructions
+## 🪜 Setup Instructions
 
 ### 1. Create an S3 Bucket
 
-Create an S3 bucket with two logical folders:
+Create a new S3 bucket with these folders:
 
-- `uploads/`: for image uploads that trigger processing.
-- `metadata/`: where the generated JSON metadata files will be stored.
+- `uploads/`: Place image files here.
+- `metadata/`: JSON files with detected labels will be stored here.
 
-You can create these folders by uploading a dummy file to each path.
+> ℹ️ You can create these folders by uploading a test file in each path.
 
----
+
 
 ### 2. Create IAM Role for Lambda
 
-Create an IAM role for the Lambda function with permissions to:
+Create an IAM role with the following permissions:
 
-- Detect labels using Amazon Rekognition.
-- Read images from S3.
-- Write metadata files back to S3.
-- Write logs to CloudWatch for monitoring and debugging.
+- **Amazon Rekognition**: `rekognition:DetectLabels`
+- **Amazon S3**: `s3:GetObject`, `s3:PutObject`
+- **Logging**: `logs:*` for basic CloudWatch access
+
+
+
+## 🚀 Deploy the Lambda Function
+
+- **Runtime**: Python 3.9 or newer  
+- **Handler**: `lambda_function.lambda_handler`  
+- **Environment Variables**:  
+  - `BUCKET_NAME`: Your S3 bucket name (e.g., `image-tagging-bucket`)  
+- **Timeout**: At least 15 seconds  
+- **Memory**: 128 MB or more  
+
+
+
+## ⚡ Set Up S3 Event Trigger
+
+In the S3 bucket:
+
+- Go to **Properties → Event notifications**
+- Create a new notification:
+  - **Event type**: `PUT` events
+  - **Prefix**: `uploads/`
+  - **Suffix**: `.jpg`, `.jpeg`, `.png`, etc.
+  - **Destination**: Lambda function
+
+
+
+## 🧠 How It Works
+
+When an image is uploaded to the `uploads/` folder:
+
+1. **Triggered Lambda** reads the file path.
+2. **Amazon Rekognition** is called via `DetectLabels`:
+   - Detects labels (e.g., `"Dog"`, `"Pet"`, `"Animal"`)
+   - Returns results with confidence scores
+3. The label results are saved to a `.json` file in `metadata/`.
+
+Example output path:  
+`metadata/cute_dog.jpg.json`
+
+
+
+## 📄 Output Notes
+
+- JSON files contain:
+  - **Detected labels**
+  - **Confidence scores**
+  - **Parent categories** (if available)
+- These can be used for search, filtering, or enrichment in your app.
 
 ---
 
-### 3. Deploy the Lambda Function and Configure Trigger
+## 🐾 Label Precision
 
-- Create a Lambda function with the appropriate runtime.
-- Attach the IAM role created above.
-- Configure the Lambda function to trigger automatically on S3 `PUT` events targeting the `uploads/` folder in your bucket.
-- The Lambda function will call Rekognition’s DetectLabels API to analyze each uploaded image and save the label data as a JSON file in the `metadata/` folder.
+Rekognition sometimes returns broader labels.  
+An image of a **cat** might be labeled as:
 
----
+- `"Animal"`
+- `"Pet"`
+- `"Feline"`
 
-### 🐾 Output Example: Cat Not Explicitly Detected
+…but not `"Cat"` if the confidence score is below the threshold.
 
-Sometimes, Rekognition returns broad labels instead of very specific ones. For instance, an image of a cat might be labeled with terms like "Animal," "Mammal," "Pet," and "Feline" rather than explicitly "Cat." This can happen when the confidence score for the specific label is below the set threshold or when the image features are ambiguous.
-
----
-
-## Tips for Improvement
-
-- Lower the confidence threshold in the Lambda function to get more granular labels.
-- Review CloudWatch logs to debug and refine detection.
-- Adjust the maximum number of labels returned to capture more or fewer categories.
+### ✅ Tip:
+- Lower the confidence threshold (e.g., from 70% to 50%) to catch more specific matches.
+- Increase `MaxLabels` if you want to capture more categories.
 
 ## 👤 Author
 
 **Salma Mohamed Kassem**  
 📍 Egypt  
 🌐 [GitHub](https://github.com/Salma22C) • [LinkedIn](https://linkedin.com/in/salma-mohamed-kassem)
+
 
