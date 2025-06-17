@@ -64,6 +64,9 @@ Working with raw `.csv` files introduced schema inconsistencies that made it dif
 4. *(Optional)* Build dashboards in Amazon QuickSight linked to Athena datasets
 
 ---
+📸 Screenshots (Optional)
+
+Although QuickSight integration is still a work in progress, here's a snapshot of the setup and testing process:
 
 ## 👤 Author
 
