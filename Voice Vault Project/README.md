@@ -23,7 +23,6 @@ Voice Vault is a serverless application that converts `.txt` files stored in Ama
 - Amazon Comprehend
 - AWS IAM
 - Python 3.9+
-- `boto3` and `botocore` (latest SDKs)
 
 ---
 
