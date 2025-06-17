@@ -4,7 +4,7 @@
 
 Voice Vault is a serverless application that converts `.txt` files stored in Amazon S3 into speech audio using [Amazon Polly](https://aws.amazon.com/polly/), optionally enhanced with summarization from [Amazon Comprehend](https://aws.amazon.com/comprehend/) and SSML formatting. The system uses AWS Lambda triggered by S3 events for automated processing.
 
----
+
 
 ## 🚀 Key Features
 
@@ -13,7 +13,6 @@ Voice Vault is a serverless application that converts `.txt` files stored in Ama
 - **Enhanced Speech:** Utilizes SSML for natural speech effects (pauses, emphasis, etc.).
 - **Fully Serverless:** Leveraging AWS Lambda and event-based S3 triggers.
 
----
 
 ## 🛠️ Technologies Used
 
@@ -24,7 +23,7 @@ Voice Vault is a serverless application that converts `.txt` files stored in Ama
 - AWS IAM
 - Python 3.9+
 
----
+
 
 ## 📋 Prerequisites
 
@@ -32,7 +31,7 @@ Voice Vault is a serverless application that converts `.txt` files stored in Ama
 - Console access
 - Python 3.9+ locally or as Lambda runtime
 
----
+
 
 ## 🧰 Setup Instructions
 
@@ -40,11 +39,10 @@ Voice Vault is a serverless application that converts `.txt` files stored in Ama
 ```
 Create a bucket (e.g., `voice-vault-bucket`) with: 
 
-notes/ # Upload your notes
-.txt files here & audio/ (Lambda will store .mp3 output here)
+notes/ # Upload your notes.txt files here
+audio/ # Lambda will store .mp3 output here
 ```
 
----
 
 ### 2. 🔐 IAM Role for Lambda
 
@@ -55,7 +53,7 @@ Create a role with:
 - `comprehend:DetectSentiment`, `comprehend:DetectKeyPhrases`
 - `logs:*` for CloudWatch
 
----
+
 
 ### 3. Deploy the Lambda Function
 
@@ -68,7 +66,7 @@ Create a role with:
 
 Ensure the deployment package includes the necessary `boto3` client, though it's available by default in the Lambda Python runtime.
 
----
+
 
 ### 4. Set Up S3 Event Trigger
 
@@ -81,7 +79,7 @@ In your S3 bucket:
   - **Suffix**: `.txt`
   - **Destination**: Your Lambda function
 
----
+
 
 ### 5. Upload a Test File
 
@@ -92,14 +90,13 @@ Upload a `.txt` file into the `notes/` folder. If `USE_SUMMARIZATION=true`, the 
 3. Generate audio using **Amazon Polly**.
 4. Store the `.mp3` file in the `audio/` folder.
 
----
 
 ### 6. Verify Output
 
 - Navigate to the `audio/` folder in your S3 bucket.
 - Download the `.mp3` file and listen to confirm proper summarization and conversion.
 
----
+
 
 ## 💡 boto3 Clients Used
 
