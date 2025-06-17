@@ -70,7 +70,7 @@ Use the built-in chat interface to ask HR-related questions.
 
 ## 📸 Demo
 
-![Ask HR Bot Chat Screenshot](./chat-demo.png)
+![Ask HR Bot Chat Screenshot](./Screenshot%202025-06-17%20155817.png)
 
 > Screenshot of Bedrock test chat interface
 
