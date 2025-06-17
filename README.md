@@ -104,5 +104,5 @@ cd awsprojects/<project-folder>
 
 * **GitHub:** [@Salma22C](https://github.com/Salma22C)
 * **LinkedIn:** [linkedin.com/in/yourname](https://www.linkedin.com/in/salma-mohamed-kassem/)
-* **Email:** [your.email@example.com](mailto:salmakassem6@gmail.com)
+* **Email:** [salmakassem6@gmail.com](mailto:salmakassem6@gmail.com)
 
