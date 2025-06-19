@@ -2,7 +2,7 @@
 
 This project provisions a basic AWS environment using Terraform, including:
 
-- A VPC with public subnets
+- A VPC with public and private subnets
 - An EC2 instance with detailed monitoring enabled
 - Security groups allowing SSH
 - CloudWatch Log Group for VPC Flow Logs
@@ -12,14 +12,14 @@ This project provisions a basic AWS environment using Terraform, including:
 
 ## 🔧 Requirements
 
-- Terraform >= 1.3.0  
+- [Terraform](https://www.terraform.io/downloads.html) >= 1.3.0  
 - AWS CLI configured (`aws configure`)
 - An AWS account with sufficient permissions
 
 ---
 
 ## 📁 Files Overview
-
+```
 | File                | Description |
 |---------------------|-------------|
 | `main.tf`           | Core infrastructure: VPC, EC2, IAM, Flow Logs |
@@ -28,73 +28,104 @@ This project provisions a basic AWS environment using Terraform, including:
 | `outputs.tf`        | Outputs like public IP and VPC ID |
 | `providers.tf`      | AWS provider configuration |
 | `.gitignore`        | Optional: ignores `.terraform/` and `*.tfstate` |
+```
 
----
+###  🚀 Deployment
 
-## 🚀 Deployment
+ 1. Prerequisites
 
-### 1. Prerequisites
-
-- [Terraform](https://www.terraform.io/downloads.html) >= 1.0
+- [Terraform](https://www.terraform.io/downloads.html) >= 1.3.0
 - AWS CLI configured (`aws configure`)
 - Valid AWS credentials
 
-### 2. Initialize and Apply
+2. Initialize and Apply
 
 ```bash
 terraform init
 terraform plan
 terraform apply
 ```
-## ⚙️ Configuration
+### ⚙️ Configuration
 
-Edit `terraform.tfvars` to set your custom parameters:
-
-```hcl
+Edit terraform.tfvars to set your custom parameters:
+```
 region          = "us-east-1"
 vpc_cidr        = "10.0.0.0/16"
 public_subnets  = ["10.0.1.0/24"]
 private_subnets = ["10.0.2.0/24"]
-instance_type   = "t3.micro"
+instance_type   = "t2.micro"
 ami_id          = "ami-0abcdef1234567890"  # Update with an appropriate AMI for your region
 ```
-## 📊 Monitoring & Observability
 
-- EC2 Monitoring: Detailed monitoring is enabled for EC2 instance metrics with 1-minute granularity.
+### 📊 Monitoring & Observability
 
-- VPC Flow Logs: Captures all ingress and egress network traffic metadata for the VPC.
+   - EC2 Monitoring: Enabled with 1-minute detailed CloudWatch metrics
 
-- CloudWatch Logs: Flow logs are streamed into CloudWatch under the log group:
-  ```
-  /aws/vpc/<vpc-name>/flow-logs
-  ```
-  ### 🔔 Alerting (Optional)
+   - VPC Flow Logs: Captures metadata for all network traffic in the VPC
 
-- Create CloudWatch metric filters to detect specific patterns such as rejected connections, traffic from unexpected sources, or high volumes of traffic.
+   - CloudWatch Logs: Flow logs are streamed to the log group:
+```
+/aws/vpc/<vpc-id>/flow-logs
+```
+### 🧠 Challenges Faced
 
-- Alarms can be added to trigger notifications or automated actions.
-  
-###  ✅ Outputs
+    - Terraform Syntax & Structure
+    Learned how to structure files (main.tf, variables.tf, etc.) and fix syntax issues like unsupported arguments.
 
-After applying the Terraform configuration, key outputs include:
+   - Provider Conflicts
+    Faced issues defining the AWS provider multiple times without aliases.
 
-   - EC2 Instance Public IP (if created in a public subnet)
+   - Incorrect Resource References
+    Debugged errors using for_each and accessing map elements properly (e.g., each.key instead of index [0]).
+
+   - Security Best Practices
+    Understood the importance of CIDR ranges, IAM scoping, and enabling logging/monitoring.
+
+  -  CloudWatch & Flow Logs
+    Learned how logs are streamed into CloudWatch and how to access log groups.
+
+   - Terraform Dependencies
+    Understood Terraform’s automatic dependency graph and when to use depends_on explicitly.
+
+
+
+### 🎯 Learning Outcomes
+
+✅ Provisioned AWS infrastructure using Terraform
+
+✅ Built networking components: VPC, subnets, route tables
+
+✅ Enabled CloudWatch monitoring for EC2 and VPC
+
+✅ Understood the concept of infrastructure as code (IaC)
+
+✅ Improved debugging skills with Terraform CLI and AWS Docs
+
+
+
+
+### ✅ Outputs
+
+After running terraform apply, the following will be output:
+
+   - EC2 Instance Public IP (only in public subnets)
 
    - CloudWatch Log Group Name
 
-  -  VPC ID
+    -VPC ID
 
-   - Subnet IDs
+   - Public and Private Subnet IDs
 
 ### 🔒 Security Notes
 
-    - SSH access is limited by default to specific CIDRs through security group rules.
+    - SSH access is restricted to specific CIDRs via security group rules
 
-   - IAM roles and policies are narrowly scoped to allow only the required permissions for VPC Flow Logs and CloudWatch.
+   - IAM roles are scoped with least-privilege permissions for:
 
-   - (Optional) CloudWatch VPC interface endpoints can be added to avoid sending log traffic over the public internet.
+      -  VPC Flow Logs
+
+     -   CloudWatch logging
 
 👤 Author
 
 Salma Mohamed Kassem
-  
