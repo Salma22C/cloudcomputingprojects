@@ -69,7 +69,7 @@ ami_id          = "ami-0abcdef1234567890"  # Update with an appropriate AMI for 
 ```
 ### 🧠 Challenges Faced
 
-    - Terraform Syntax & Structure
+   - Terraform Syntax & Structure
     Learned how to structure files (main.tf, variables.tf, etc.) and fix syntax issues like unsupported arguments.
 
    - Provider Conflicts
@@ -112,15 +112,15 @@ After running terraform apply, the following will be output:
 
    - CloudWatch Log Group Name
 
-    -VPC ID
+   - VPC ID
 
    - Public and Private Subnet IDs
 
 ### 🔒 Security Notes
 
-    - SSH access is restricted to specific CIDRs via security group rules
+ - SSH access is restricted to specific CIDRs via security group rules
 
-   - IAM roles are scoped with least-privilege permissions for:
+ - IAM roles are scoped with least-privilege permissions for:
 
       -  VPC Flow Logs
 
