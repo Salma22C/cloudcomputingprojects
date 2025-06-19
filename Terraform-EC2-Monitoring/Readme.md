@@ -1,27 +1,33 @@
-# EC2 Monitoring with VPC Flow Logs using Terraform
+# EC2 Monitoring on AWS with Terraform
 
-This project provisions a complete AWS infrastructure using Terraform, including a Virtual Private Cloud (VPC), EC2 instances, and VPC Flow Logs for monitoring and observability.
+This project provisions a basic AWS environment using Terraform, including:
 
-## 🔧 Features
-
-- Custom VPC with public and private subnets
-- EC2 instance(s) with detailed monitoring enabled
-- Security groups for controlled network access
-- VPC Flow Logs sent to CloudWatch Logs
-- IAM roles and policies for flow log delivery
-- Optional interface VPC endpoint for CloudWatch Logs
+- A VPC with public subnets
+- An EC2 instance with detailed monitoring enabled
+- Security groups allowing SSH
+- CloudWatch Log Group for VPC Flow Logs
+- IAM role and policy to support logging
 
 ---
 
-## 📁 Structure
+## 🔧 Requirements
 
-```
-├── main.tf # Includes VPC, EC2, and flow log resources
-├── variables.tf # Configurable variables (region, CIDRs, instance type)
-├── outputs.tf # Key output values (IP addresses, log group names)
-├── terraform.tfvars # Variable values (can be added locally)
-└── README.md # Project overview
-```
+- Terraform >= 1.3.0  
+- AWS CLI configured (`aws configure`)
+- An AWS account with sufficient permissions
+
+---
+
+## 📁 Files Overview
+
+| File                | Description |
+|---------------------|-------------|
+| `main.tf`           | Core infrastructure: VPC, EC2, IAM, Flow Logs |
+| `variables.tf`      | Input variables (region, CIDR, AMI ID, etc.) |
+| `terraform.tfvars`  | Variable values specific to this deployment |
+| `outputs.tf`        | Outputs like public IP and VPC ID |
+| `providers.tf`      | AWS provider configuration |
+| `.gitignore`        | Optional: ignores `.terraform/` and `*.tfstate` |
 
 ---
 
