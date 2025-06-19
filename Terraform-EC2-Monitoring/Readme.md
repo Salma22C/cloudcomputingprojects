@@ -91,15 +91,15 @@ ami_id          = "ami-0abcdef1234567890"  # Update with an appropriate AMI for 
 
 ### 🎯 Learning Outcomes
 
-✅ Provisioned AWS infrastructure using Terraform
+- Provisioned AWS infrastructure using Terraform
 
-✅ Built networking components: VPC, subnets, route tables
+- Built networking components: VPC, subnets, route tables
 
-✅ Enabled CloudWatch monitoring for EC2 and VPC
+- Enabled CloudWatch monitoring for EC2 and VPC
 
-✅ Understood the concept of infrastructure as code (IaC)
+- Understood the concept of infrastructure as code (IaC)
 
-✅ Improved debugging skills with Terraform CLI and AWS Docs
+- Improved debugging skills with Terraform CLI and AWS Docs
 
 
 
