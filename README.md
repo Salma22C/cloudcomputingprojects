@@ -103,6 +103,6 @@ cd awsprojects/<project-folder>
 ## 📢 Connect with Me
 
 * **GitHub:** [@Salma22C](https://github.com/Salma22C)
-* **LinkedIn:** [linkedin.com/in/yourname](https://www.linkedin.com/in/salma-mohamed-kassem/)
+* **LinkedIn:** [linkedin.com/in/salma-mohamed-kassem](https://www.linkedin.com/in/salma-mohamed-kassem/)
 * **Email:** [salmakassem6@gmail.com](mailto:salmakassem6@gmail.com)
 
