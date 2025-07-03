@@ -67,7 +67,6 @@ def lambda_handler(event, context):
 
 ---
 
-Thanks for checking out my project! Feel free to connect if you want to chat about serverless AWS or cloud projects.  
 
 — Salma Kassem  
 
