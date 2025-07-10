@@ -1,4 +1,4 @@
-# ✅ PoC: Student Performance Tracker using AWS Serverless Stack
+# Student Performance Tracker using AWS Serverless Stack
 
 ## 📌 Objective
 
