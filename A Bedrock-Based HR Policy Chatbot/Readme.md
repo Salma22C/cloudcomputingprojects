@@ -1,6 +1,6 @@
 # 🤖 Ask HR Bot – Generative AI Chatbot using Amazon Bedrock (PoC)
 
-**Ask HR Bot** is a proof-of-concept chatbot built using **Amazon Bedrock Knowledge Base**. It allows users to ask natural language questions about company HR policies, retrieving accurate answers from internal documents — without writing code or training models.
+**Ask HR Bot** is a  chatbot built using **Amazon Bedrock Knowledge Base**. It allows users to ask natural language questions about company HR policies, retrieving accurate answers from internal documents  without writing code or training models.
 
 
 
