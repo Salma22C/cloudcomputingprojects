@@ -1,4 +1,4 @@
-# 🧠 Multilingual Customer Feedback Analyzer (Mentored Project)
+# 🧠 Multilingual Customer Feedback Analyzer 
 
 ## 🎯 Project Purpose
 
