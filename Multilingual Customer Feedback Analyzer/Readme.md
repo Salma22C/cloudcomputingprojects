@@ -50,11 +50,7 @@ AWS Lambda
 
 ---
 
-## 🙌 Acknowledgment
 
-I’m still growing in my AWS and cloud journey, but mentoring and helping others on this project was a great experience. It pushed me to learn deeper and understand not just how, but **why** these services work together.
-
----
 
 ## 🧪 Sample Test
 
