@@ -78,7 +78,7 @@ Here are   my hands-on projects demonstrating my skills across various AWS servi
 ## 🔧 Tools & Skills
 
 * **AWS Services:** Lambda, S3, EC2, API Gateway, QuickSight, Bedrock, Polly, Rekognition, Glue, Athena
-* **DevOps Tools:** Terraform, GitHub Actions, Docker, CloudWatch
+* **DevOps Tools:** Terraform, CloudWatch
 * **Security & IAM:** Role-based access control, S3 bucket policies, VPC security groups
 * **GCP Services**
 
