@@ -2,13 +2,12 @@
 
 Welcome to my **Cloud Computing Projects Portfolio** — a curated showcase of hands-on cloud engineering projects built using **Amazon Web Services** and **Google Cloud Platform**. These projects demonstrate practical experience in serverless architecture, AI/ML integration, infrastructure as code, cost optimization, and scalable deployments.
 
----
+
 
 ## 🚀 Featured Projects
 
 Here are my hands-on projects demonstrating my skills across various AWS and GCP services:
 
----
 
 ### 🔗 GCP URL Shortener App
 
@@ -89,7 +88,7 @@ Here are my hands-on projects demonstrating my skills across various AWS and GCP
 **AWS Services:** Transcribe, Comprehend, QuickSight, Lambda  
 📂 [Project Folder](https://github.com/Salma22C/awsprojects/tree/main/Podcast%20Insights%20Dashboard)
 
----
+
 
 ## 🔧 Tools & Skills
 
@@ -98,7 +97,7 @@ Here are my hands-on projects demonstrating my skills across various AWS and GCP
 * **DevOps Tools:** Terraform, CloudWatch  
 * **Security & IAM:** Role-based access control, S3 bucket policies, VPC security groups
 
----
+
 
 ## 📁 Getting Started
 
