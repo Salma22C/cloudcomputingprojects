@@ -1,6 +1,6 @@
-# ☁️ AWS Projects Portfolio
+# ☁️ Cloud Computing Projects Portfolio
 
-Welcome to my **AWS Projects Portfolio** — a curated showcase of hands-on cloud engineering projects built using Amazon Web Services. These projects demonstrate practical experience in serverless architecture, AI/ML integration, infrastructure as code, cost optimization, and scalable deployments.
+Welcome to my **Cloud Computing Projects Portfolio** — a curated showcase of hands-on cloud engineering projects built using Amazon Web Services. These projects demonstrate practical experience in serverless architecture, AI/ML integration, infrastructure as code, cost optimization, and scalable deployments.
 
 
 ----
@@ -80,6 +80,7 @@ Here are   my hands-on projects demonstrating my skills across various AWS servi
 * **AWS Services:** Lambda, S3, EC2, API Gateway, QuickSight, Bedrock, Polly, Rekognition, Glue, Athena
 * **DevOps Tools:** Terraform, GitHub Actions, Docker, CloudWatch
 * **Security & IAM:** Role-based access control, S3 bucket policies, VPC security groups
+* **GCP Services**
 
 
 
